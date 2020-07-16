@@ -1,0 +1,32 @@
+Task : Create a list consisting of Fibonacci numbers from 1 to 55 using control flow statements.
+
+The desired output is like :
+
+fibonacci →  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+SOLUTION:
+
+fibonacci = [] # emptylist to add our numbers.
+
+for i in range(-2,8): 
+    if i < 0:
+        fibonacci.append(1)
+
+# I need to have two 1s as my first and second elements in my list. That's why I started 
+                        with -2 and set the condition i < 0. 
+#First loop: -2 < 0, print 1.
+#Second loop: -1 < 0, print another 1.
+#Third loop: 0 < 0 is false so it will exit from if condition and try the next condition. 
+#fibonacci = [1,1]
+
+    else:
+        fibonacci.append(fibonacci[i]+fibonacci[i+1]) 
+# Now new elements will be added according to the operation abow. 
+# i = 0: the digit in 0 place and the digit in 1st(0+1= 1) place will be added and sum will be added 
+as a new element in the list. 
+#List will go on till i = 7.
+
+
+print(fibonacci)
+
+OUTPUT: fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
